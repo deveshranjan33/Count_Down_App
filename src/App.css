@@ -4,9 +4,20 @@
   margin-top: 9rem
 }
 .header1 {
+  color :chocolate;
   text-align: center;
   margin-top: 0;
 }
 .txt {
   font-size: 18px;
+}
+.spn1
+{
+  color:blue;
+}
+.div1 {
+  color:purple;
+}
+.hll {
+  color:red;
 }

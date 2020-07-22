@@ -19,15 +19,15 @@ class App extends Component {
     return (
       <div>
         <h2 className="header">Count Down App</h2>
-        <h3 className="header1" color="chocolate" >
-          CountDown To <span color="blue">{this.state.deadline}</span>
+        <h3 className="header1">
+          CountDown To <span className="spn1">{this.state.deadline}</span>
         </h3>
         <br/>
         <Clock
           deadline={this.state.deadline}
         />
         <br/>
-        <div color="purple" className="offset-4 col-sm-5">Enter the Date (You can add time also in the given format):-</div>
+        <div className="offset-4 col-sm-5 div1">Enter the Date (You can add time also in the given format):-</div>
         <br/>
         <div className="row">
           <div className="form-group offset-4 col-sm-3">

@@ -37,11 +37,11 @@ class Clock extends Component {
   render() {
     // this.getTimeUntil(this.props.deadline);
     return (
-      <div className="row">
-        <div color="red" className="offset-4 col-sm-1 txt">Days: {this.state.days}</div>
-        <div color="red" className="col-sm-1 txt">Hours: {this.state.hours}</div>
-        <div color="red" className="col-sm-1 txt">Minutes: {this.state.minutes}</div>
-        <div color="red" className="col-sm-2 txt">Seconds: {this.state.seconds}</div>
+      <div className="row hll">
+        <div className="offset-4 col-sm-1 txt">Days: {this.state.days}</div>
+        <div className="col-sm-1 txt">Hours: {this.state.hours}</div>
+        <div className="col-sm-1 txt">Minutes: {this.state.minutes}</div>
+        <div className="col-sm-2 txt">Seconds: {this.state.seconds}</div>
       </div>
     )
   }
