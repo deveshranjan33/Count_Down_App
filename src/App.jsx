@@ -1,41 +1,42 @@
 import React, { Component } from 'react';
 import './App.css';
+import Clock from './Clock';
 
 class App extends Component {
   constructor (props) {
     super(props);
 
     this.state = {
-      deadline : 'December 15, 2020'
+      deadline : 'January 1, 2021 00:00',
+      newDeadline : ''
     }
 
   }
   changeDeadline() {
-    this.setState({deadline : 'November 15, 2020'});
+    this.setState({deadline : this.state.newDeadline});
   }
   render() {
     return (
       <div>
-        <h2 class="header">Count Down App</h2>
-        <h3 class="header1" color="blue" >
-          CountDown To {this.state.deadline}
+        <h2 className="header">Count Down App</h2>
+        <h3 className="header1" color="chocolate" >
+          CountDown To <span color="blue">{this.state.deadline}</span>
         </h3>
         <br/>
-        <div className="row">
-          <div color="red" className="offset-4 col-sm-1 txt">Days: 14</div>
-          <div color="red" className="col-sm-1 txt">Hours: 30</div>
-          <div color="red" className="col-sm-1 txt">Minutes: 15</div>
-          <div color="red" className="col-sm-1 txt">Seconds: 20</div>
-        </div>
+        <Clock
+          deadline={this.state.deadline}
+        />
         <br/>
-        <div color="purple" class="offset-4 col-sm-3 txt">Enter the Date:-</div>
+        <div color="purple" className="offset-4 col-sm-5">Enter the Date (You can add time also in the given format):-</div>
         <br/>
         <div className="row">
           <div className="form-group offset-4 col-sm-3">
-            <input placeholder="Date" class="form-control" type="text"></input>
+            <input placeholder="New Date" className="form-control" type="text"
+            onChange={event =>this.setState({newDeadline : event.target.value})} >
+            </input>
           </div>
-          <div class="col-sm-1">
-            <button onClick={() => this.changeDeadline()} class="btn btn-">
+          <div className="col-sm-1">
+            <button onClick={() => this.changeDeadline()} className="btn btn-success">
             Submit
             </button>
           </div>
